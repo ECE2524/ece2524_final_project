@@ -23,3 +23,10 @@ future developers will fully understand why we made the decisions we did during 
 aspect of this rule will be achieved by giving developers the ability to implement more rooms for the user to traverse
 while exploring the Asylum. This will make it so the game could be ever-growing; adding additional features for the
 game-player.
+
+Finally, we plan to follow the Rule of Least Surprise, especially with the user inputs. As the user traverses through 
+the game, commands to do actions must be what the user would expect. It would be unreasonable to make "acquire" or 
+"accio" the explicit commands to pick up something, but "pick up" or "take" would be much better commands. The 
+convention of north, south, east, and west must also be maintained when deciding on directions. As our expected 
+audience will be our classmates, we would not want to include references to events from the 1970s but instead from 
+events in our lifetimes.
