@@ -18,7 +18,7 @@ void player::addInventory(string newItem)
 void player::printInventory()
 {
   cout << "Your inventory:" << endl;
-  for(list<int>::const_iterator iterator = inventory.begin(), end = inventory.end(); iterator != end; ++iterator)
+  for(list<string>::const_iterator iterator = inventory.begin(), end = inventory.end(); iterator != end; ++iterator)
   {
     cout << *iterator << endl;
   }
