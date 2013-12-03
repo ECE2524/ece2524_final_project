@@ -10,4 +10,4 @@ public:
   ~room();
   void addItem(string);
   void printItems();
-}
+};
