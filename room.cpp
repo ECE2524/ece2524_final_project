@@ -1,5 +1,7 @@
 #include "room.h"
 
+#include <iostream>
+
 room::room()
 {
 
