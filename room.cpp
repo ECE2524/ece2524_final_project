@@ -20,7 +20,7 @@ void room::addItem(string newItem)
 void room::printItems()
 {
   cout << "Room items:" << endl;
-  for(list<int>::const_iterator iterator = intList.begin(), end = intList.end(); iterator != end; ++iterator)
+  for(list<string>::const_iterator iterator = items.begin(), end = items.end(); iterator != end; ++iterator)
   {
     cout << *iterator << endl;
   }
