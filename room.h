@@ -5,7 +5,7 @@ class room
 {
 private:
   list<string> items;
-  list<string> contiguousRooms;
+  list<string> adjacentRooms;
   string name;
   string description;
 public:
@@ -13,8 +13,8 @@ public:
   ~room();
   void addItem(string);
   void printItems();
-  void addContiguousRoom(string);
-  void printContigousRooms();
+  void addAdjacentRoom(string);
+  void printAdjacentRooms();
   void setName(string);
   void printName();
   void setDescription(string);
