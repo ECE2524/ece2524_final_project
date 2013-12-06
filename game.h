@@ -11,4 +11,5 @@ public:
   game();
   ~game();
   void getInput();
+  bool checkInput();
 }
