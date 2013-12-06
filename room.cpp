@@ -26,6 +26,20 @@ void room::printItems()
   }
 }
 
+void room::addAdjacentRoom(string newItem)
+{
+  adjacentRooms.push_back(newItem);
+}
+
+void room::printAdjacentRooms()
+{
+  cout << "Adjacent rooms:" << endl;
+  for(list<string>::const_iterator iterator = adjacentRooms.begin(), end = adjacentRooms.end(); iterator != end; ++iterator)
+  {
+    cout << *iterator << endl;
+  }
+}
+
 void room::setName(string newName)
 {
   name = newName;
