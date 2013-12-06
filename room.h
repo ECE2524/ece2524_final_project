@@ -4,16 +4,19 @@
 class room
 {
 private:
+  list<string> items;
+  list<string> contiguousRooms;
   string name;
   string description;
-  list<string> items;
 public:
   room();
   ~room();
   void addItem(string);
   void printItems();
-  void room setName(string);
-  void room printName();
-  void room setDescription(string);
-  void room printDescription();
+  void addContiguousRoom(string);
+  void printContigousRooms();
+  void setName(string);
+  void printName();
+  void setDescription(string);
+  void printDescription();
 };
