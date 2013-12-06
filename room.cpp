@@ -26,9 +26,9 @@ void room::printItems()
   }
 }
 
-void room::addAdjacentRoom(string newItem)
+void room::addAdjacentRoom(string newRoom)
 {
-  adjacentRooms.push_back(newItem);
+  adjacentRooms.push_back(newRoom);
 }
 
 void room::printAdjacentRooms()
