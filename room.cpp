@@ -25,3 +25,23 @@ void room::printItems()
     cout << *iterator << endl;
   }
 }
+
+void room::setName(string newName)
+{
+  name = newName;
+}
+
+void room::printName()
+{
+  cout << name << endl;
+}
+
+void room::setDescription(string newDescription)
+{
+  description = newDescription;
+}
+
+void room::pringDescription()
+{
+  cout << description << endl;
+}
