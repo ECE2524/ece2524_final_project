@@ -9,12 +9,34 @@ private:
   string string2;
   int command;
   room currentRoom;
-  player currentPlayer;
+  player patient;
+
+  room patientroom1;
+  room patientroom2;
+  room patientroom3;
+  room bathroom;
+  room hallway2ndfloor;
+  room stairs;
+  room lobby;
+  room wardenoffice;
+  room lab;
+  room operatingroom;
+  room solitaryconfinement;
+  room hallway1stfloor;
+  room courtyard;
+  room guardhouse;
+
+  string map;
+  string drawing;
 public:
   game();
   ~game();
   void gameInit();
-  void getInput();
+  void outputWelcome();
+  void outputRoom();
+  void outputMap();
+  void outputDrawing();
+  bool getInput();
   bool checkInput();
   void run();
 };
