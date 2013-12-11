@@ -1,18 +1,21 @@
 #include "game.h"
 
+// class constructor
 game::game()
 {
 	
 }
 
+// class destructor
 game::~game()
 {
 
 }
 
+// initializes the game
 void game::gameInit()
 {
-   /* example
+   /* example room
   room bedroom;
   bedroom.setName("bedroom");
   bedroom.setDescription("You are in a dreary bedroom with white walls and ceiling.  You look around to find a few items.");
@@ -155,6 +158,7 @@ void game::gameInit()
 	"       -.______  | . /  ______,-		\r\n";
 }
 
+// prints a welcome message
 void game::outputWelcome()
 {
 	cout << "\n-----------------------------------------------------------------\n\n";
@@ -172,6 +176,7 @@ void game::outputWelcome()
 	cin.ignore();
 }
 
+// prints the room information
 void game::outputRoom()
 {
 	cout << "\n-----------------------------------------------------------------\n\n";
@@ -181,16 +186,19 @@ void game::outputRoom()
 	currentRoom.printAdjacentRooms();
 }
 
+// prints the map item
 void game::outputMap()
 {
 	cout << map;
 }
 
+// prints the drawing item
 void game::outputDrawing()
 {
 	cout << drawing;
 }
 
+// gets input string from the user
 bool game::getInput()
 {
   input.clear();
@@ -227,6 +235,7 @@ bool game::getInput()
   return 1;
 }
 
+// checks the input string entered by the user
 bool game::checkInput()
 {
   if(string1 == "move")
@@ -251,6 +260,7 @@ bool game::checkInput()
   }
 }
 
+// runs the game
 void game::run()
 {
 	enum states {state_welcome, state_output, state_input, state_command, state_move, state_pickup, state_use};
@@ -258,18 +268,22 @@ void game::run()
 
 	currentRoom = solitaryconfinement;
 
+	// finite state machine
 	while(1)
 	{
 		switch(state)
 		{
+		// game welcome state
 		case state_welcome:
 			outputWelcome();
 			state = state_output;
 			break;
+		// state to output the room info
 		case state_output:
 			outputRoom();
 			state = state_input;
 			break;
+		// state to get input from the user
 		case state_input:
 			if(getInput() == 1)
 			{
@@ -283,6 +297,7 @@ void game::run()
 			else
 				state = state_output;
 			break;
+		// state to determine the command from the user
 		case state_command:
 			switch(command)
 			{
@@ -309,6 +324,7 @@ void game::run()
 				break;
 			}
 			break;
+		// state to move from one room to another
 		case state_move:
 			if(string2 == "patient room 1")
 				currentRoom = patientroom1;
@@ -345,6 +361,7 @@ void game::run()
 			}
 			state = state_output;
 			break;
+		// state to use an object
 		case state_use:
 			if(string2 == "map")
 				outputMap();
@@ -356,6 +373,7 @@ void game::run()
 				cout << "You pull out the severed head.  It looks like one of your college professors...\n\n";
 			state = state_input;
 			break;
+		// state to pickup an object
 		case state_pickup:
 			patient.addInventory(string2);
 			cout << "\nYou have added the" << string2 << " to your inventory.\n\n";
