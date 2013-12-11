@@ -163,16 +163,16 @@ void game::outputWelcome()
 {
 	cout << "\n-----------------------------------------------------------------\n\n";
 	cout << "Welcome to the Woodbury Asylum.  You have been admitted because you have been diagnosed with a serious mental illness.  Our doctors will work their best to help you recuperate.\n\n";
-	cout << "As a patient, you will need to abide by the folowing rules:\n";
-	cout << "-To move between rooms, enter command 'move <adjacent room name>'\n";
-	cout << "-To pick up an item , enter command 'pickup <item>'\n";
-	cout << "-To use an item, enter command 'use <item>'\n";
-	cout << "-To get the current room info, enter command 'info'\n";
-	cout << "-To get help with command, enter command 'help'\n";
-	cout << "-To exit, enter command 'exit'\n\n";
+	cout << "To explore the psychiatric institute, you can type the following:\n";
+	cout << "- To move between rooms        'move <adjacent room name>'\n";
+	cout << "- To pick up an item           'pickup <item>'\n";
+	cout << "- To use an item               'use <item>'\n";
+	cout << "- To get the room info         'info'\n";
+	cout << "- To get help with commands    'help'\n";
+	cout << "- To exit                      'exit'\n\n";
 	cout << "Enjoy your stay!\n";
 	cout << "\n-----------------------------------------------------------------\n\n";
-	cout << "Press any key to play...";
+	cout << "Press 'ENTER' to play!";
 	cin.ignore();
 }
 
