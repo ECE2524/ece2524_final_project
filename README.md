@@ -1,8 +1,6 @@
 Asylum Amnesia
 =====================
 
-Asylum Amnesia
-
 contributors: jpenn92, cmpadden, mp1138
 url: https://github.com/cmpadden/ece2524_final_project
 
