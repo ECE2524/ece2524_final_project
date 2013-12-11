@@ -1,4 +1,4 @@
-ece2524_final_project
+Asylum Amnesia
 =====================
 
 Asylum Amnesia
