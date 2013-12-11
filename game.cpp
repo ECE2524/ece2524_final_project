@@ -168,7 +168,8 @@ void game::outputWelcome()
 	cout << "-To exit, enter command 'exit'\n\n";
 	cout << "Enjoy your stay!\n";
 	cout << "\n-----------------------------------------------------------------\n\n";
-	system("pause");
+	cout << "Press any key to continue...";
+	cin.ignore();
 }
 
 void game::outputRoom()
