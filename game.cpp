@@ -61,18 +61,11 @@ voide game::gameInit()
   patientroom3.addAdjacentRoom("hallway2ndfloor");
   patientroom3.addItem("lettercombination");
 
-
   room bathroom;
   bathroom.setName("bathroom");
   bathroom.setDescription("A mirror is located on the adjacent wall to the entrance. Looking into it you see yourself. With blood-shot eyes and veins protruding from your neck, you stare in disbelief. You see a shadow walk behind you in the mirror, but turn around to see nothing.");
   bathroom.addAdjacentRoom("hallway2ndfloor");
   bathroom.addItem("");
-
-  room patientroom3;
-  patientroom3.setName("patientroom3");
-  patientroom3.setDescription("");
-  patientroom3.addAdjacentRoom("");
-  patientroom3.addItem("");
 
   room hallway2ndfloor;
   hallway2ndfloor.setName("hallway2ndfloor");
@@ -104,7 +97,7 @@ voide game::gameInit()
   wardenoffice.addAdjacentRoom("hallway1stfloor");
   wardenoffice.addItem("blueprints");
 
-   /* bluepring:
+   /* blueprints:
    
    Second Floor_______________________
    |                |                |
