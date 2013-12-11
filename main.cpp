@@ -1,7 +1,7 @@
 #include <iostream>
 #include "game.h"
 
-using namspace std;
+using namespace std;
 
 int main()
 {
