@@ -1,6 +1,8 @@
 #include <string>
 #include <list>
 
+using namespace std;
+
 class room
 {
 private:
@@ -14,6 +16,7 @@ public:
   void addItem(string);
   void printItems();
   void addAdjacentRoom(string);
+  vool isAdjacentRoom(string);
   void printAdjacentRooms();
   void setName(string);
   void printName();
