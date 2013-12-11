@@ -7,8 +7,9 @@ url: https://github.com/cmpadden/ece2524_final_project
 To run the game, download all files and run the command "make".  You should be able to run the program by running the "asylum" file (command "./asylum").
 
 This project is a text based adventure game.  The player wakes up in an asylum with no memory and must figure out
-what events have happened by exploring rooms and using objects to solve puzzles.  We may also implement a combat
-system in our game.
+what events have happened by exploring rooms and using objects to solve puzzles.
+
+<!-- more -->
 
 One design philosophy we look to follow is the Rule of Modularity.  We plan to write the game in a way so that it
 can be expanded in the future.  For example, the game will output text, but by using different modules for the
