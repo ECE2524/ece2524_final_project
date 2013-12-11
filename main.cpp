@@ -11,7 +11,7 @@ int main()
 
   while(1)
   {
-    game.run();
+    theGame.run();
   }
 
 return 0;
