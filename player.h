@@ -12,6 +12,6 @@ public:
   player();
   ~player();
   void addInventory(string);
-  void isInventory(string);
+  bool isInventory(string);
   void printInventory();
 };
