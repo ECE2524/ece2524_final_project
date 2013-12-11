@@ -376,7 +376,7 @@ void game::run()
 		// state to pickup an object
 		case state_pickup:
 			patient.addInventory(string2);
-			cout << "\nYou have added the" << string2 << " to your inventory.\n\n";
+			cout << "\nYou have added the " << string2 << " to your inventory.\n\n";
 			state = state_output;
 			break;
 		}
