@@ -29,6 +29,26 @@ voide game::gameInit()
   patientroom1.addAdjacentRoom("hallway2ndfloor")
   patientroom1.addItem("drawing");
   
+  /* drawing:
+  
+      (                      )
+      |\    _,--------._    / |
+      | `.,'            `. /  |
+      `  '              ,-'   '
+       \/_         _   (     /
+      (,-.`.    ,',-.`. `__,'
+       |/#\ ),-','#\`= ,'.` |
+       `._/)  -'.\_,'   ) ))|
+       /  (_.)\     .   -'//
+      (  /\____/\    ) )`'\
+       \ |V----V||  ' ,    \
+        |`- -- -'   ,'   \  \      _____
+ ___    |         .'    \ \  `._,-'     `-
+    `.__,`---^---'       \ ` -'
+       -.______  \ . /  ______,-
+               `.     ,'          
+   */
+  
   room patientroom2;
   patientroom2.setName("patientroom2");
   patientroom2.setDescription("This room feels familiar to you. On the ground there is a journal with all of the pages but one removed. The page states, ‘They know about us’.");
@@ -83,6 +103,41 @@ voide game::gameInit()
   wardenoffice.setDescription("The room is nicely decorated with rich colored wood and a large leather chair. From the ceiling, the entrails of an unknown creature hang. Below this there is a pile of blood-splattered documents. One detailing the layout of the building.");
   wardenoffice.addAdjacentRoom("hallway1stfloor");
   wardenoffice.addItem("blueprints");
+
+   /* bluepring:
+   
+   Second Floor_______________________
+   |                |                |
+   |    Bathroom    |    Patient     |
+   |                |    Room 1      |
+   |______    ______|______    ______|_______
+   |                                 |       |
+   |           Hallway2               stairs |
+   |______    ______________    _____|_______|
+   |                |                |
+   |    Patient     |    Patient     |
+   |    Room 2      |    Room 3      |
+   |________________|________________|
+   
+   
+   
+   First Floor_______________________________________
+   |                |                |              |          Outdoors
+   |    Lab         |    Operating   |       Lobby  |
+   |                |    Room        |              |
+   |______    ______|______    ______|_______       |
+   |                                 |       |       
+   |               Hallway1           stairs |           
+   |______    ______________    _____|_______|               ____________
+   |                |                |              |        |           |
+   |    Solitary    |    Warden      |              |        |  Guard    |
+   |    Confinement |    Office      |              |        |  House    |
+   |________________|________________|______________|        |___________|
+   
+   
+   */
+
+
 
   room lab;
   lab.setName("lab");
