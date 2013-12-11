@@ -11,9 +11,9 @@ OBJFILES := $(SOURCES:.cpp=.o)
 DEPFILES := $(SOURCES:.cpp=.d)
 
 $(PROG) : $(OBJFILES)
-  $(LINK.o) $(LDFLAGS) -o $@ $^
+	$(LINK.o) $(LDFLAGS) -o $@ $^
 
 clean :
-  rm -f $(PROG) $(OBJFILES) $(DEPFILES)
+	rm -f $(PROG) $(OBJFILES) $(DEPFILES)
 
 -include $(DEPFILES)
