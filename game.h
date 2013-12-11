@@ -1,6 +1,8 @@
 #include "player.h"
 #include "room.h"
 
+#include <cstdlib>
+
 class game
 {
 private:
