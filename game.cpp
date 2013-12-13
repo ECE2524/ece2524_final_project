@@ -210,7 +210,10 @@ bool game::getInput()
 	getline(cin, input);
 
 	if(input == "exit")
+	{
+		system("clear");
 		exit(0);
+	}
 	if(input == "info")
 	{
 		return 0;

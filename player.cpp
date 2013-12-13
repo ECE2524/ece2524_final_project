@@ -12,6 +12,18 @@ player::~player()
 
 }
 
+// set the name of the player
+void setName(string newName)
+{
+	name = newName;
+}
+
+// print the name of the player
+void printName()
+{
+	cout << name;
+}
+
 // add an item to the player inventory
 void player::addInventory(string newItem)
 {
