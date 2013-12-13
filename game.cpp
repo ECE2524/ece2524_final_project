@@ -222,13 +222,16 @@ bool game::getInput()
 	if(input == "exit")
 		exit(0);
 	if(input == "info")
-	{
 		return 0;
-	}
 	if(input == "help")
 	{
 		outputWelcome();
 		return 0;
+	}
+	if(input == "show")
+	{
+		string1 = "show";
+		return 1;
 	}
 	
 	int i = 0;
@@ -237,8 +240,8 @@ bool game::getInput()
 		string1 += input[i];
 		i++;
 	}
-	if(input[i] != '\0')
-		i++;
+	if(i < input.size())
+		i++; 
 	while(i < input.size())
 	{
 		string2 += input[i];
@@ -410,10 +413,13 @@ void game::run()
 			cout << "\nYou have added the " << string2 << " to your inventory.\n\n";
 			state = state_input;
 			break;
+		// state to print the inventory
 		case state_inventory:
 			system("clear");
 			patient.printInventory();
-			state = state_input;
+			cout << "Press 'ENTER' to continue...";
+			cin.ignore();
+			state = state_output;
 			break;
 		}
 	}

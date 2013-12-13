@@ -44,9 +44,10 @@ bool player::isInventory(string useItem)
 // print the items the player inventory
 void player::printInventory()
 {
-	cout << "Your inventory:" << endl;
+	cout << "Your inventory:\n";
 	for(list<string>::const_iterator iterator = inventory.begin(), end = inventory.end(); iterator != end; ++iterator)
 	{
-		cout << *iterator << endl;
+		cout << *iterator << "\n";
 	}
+	cout << "\n";
 }
