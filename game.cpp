@@ -114,9 +114,9 @@ void game::gameInit()
 	guardhouse.addAdjacentRoom("courtyard");
 	guardhouse.addItem("");
 
-	solitaryconfinementdoor.setName("guard house door");
-	solitaryconfinementdoor.setDescription("The door is locked with a numeric key-pad.");
-	solitaryconfinementdoor.addAdjacentRoom("courtyard");
+	guardhousedoor.setName("guard house door");
+	guardhousedoor.setDescription("The door is locked with a numeric key-pad.");
+	guardhousedoor.addAdjacentRoom("courtyard");
 
 	map = 
 	"  Second Floor_______________________						\r\n"
