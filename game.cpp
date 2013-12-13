@@ -175,6 +175,7 @@ void game::outputWelcome()
 	cout << "- To pick up an item           'pickup <item>'\n";
 	cout << "- To use an item               'use <item>'\n";
 	cout << "- To get the room info         'info'\n";
+	cout << "- To show your inventory       'show'\n";
 	cout << "- To get help with commands    'help'\n";
 	cout << "- To exit                      'exit'\n\n";
 	cout << "Enjoy your stay!\n\n";
