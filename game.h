@@ -31,9 +31,11 @@ private:
 	room lab;
 	room operatingroom;
 	room solitaryconfinement;
+	room solitaryconfinementdoor;
 	room hallway1stfloor;
 	room courtyard;
 	room guardhouse;
+	room guardhousedoor;
 
 	// items in the game
 	string map;
