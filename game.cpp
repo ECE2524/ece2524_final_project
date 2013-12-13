@@ -161,7 +161,7 @@ void game::gameInit()
 // prints a welcome message
 void game::outputWelcome()
 {
-	cout << "\n-----------------------------------------------------------------\n\n";
+	system("clear");
 	cout << "Welcome to the Woodbury Asylum.  You have been admitted because you have been diagnosed with a serious mental illness.  Our doctors will work their best to help you recuperate.\n\n";
 	cout << "To explore the psychiatric institute, you can type the following:\n";
 	cout << "- To move between rooms        'move <adjacent room name>'\n";
@@ -170,8 +170,7 @@ void game::outputWelcome()
 	cout << "- To get the room info         'info'\n";
 	cout << "- To get help with commands    'help'\n";
 	cout << "- To exit                      'exit'\n\n";
-	cout << "Enjoy your stay!\n";
-	cout << "\n-----------------------------------------------------------------\n\n";
+	cout << "Enjoy your stay!\n\n";
 	cout << "Press 'ENTER' to play!";
 	cin.ignore();
 }
