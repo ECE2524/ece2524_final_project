@@ -1,4 +1,4 @@
-SOURCES := player.cpp room.cpp game.cpp main.cpp
+SOURCES := item.cpp player.cpp room.cpp game.cpp main.cpp
 PROG := asylum
 CFLAGS := -Wall -Wextra -g
 LDFLAGS :=
