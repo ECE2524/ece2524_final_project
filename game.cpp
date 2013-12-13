@@ -319,7 +319,10 @@ void game::run()
 					state = state_command;
 				}
 				else
+				{
+					cout << "Invalid Command \n\n";
 					state = state_input;
+				}
 			}
 			else
 				state = state_output;
