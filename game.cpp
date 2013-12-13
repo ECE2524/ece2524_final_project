@@ -32,7 +32,7 @@ void game::gameInit()
 	patientroom1.addItem("drawing");
 	    
 	patientroom2.setName("patient room 2");
-	patientroom2.setDescription("This room feels familiar to you. On the ground there is a journal with all of the pages but one removed. The page states, ‘They know about us’.");
+	patientroom2.setDescription("This room feels familiar to you. On the ground there is a journal with all of the pages but one removed. The page states, ‘They're going to change me’.");
 	patientroom2.addAdjacentRoom("hallway 2nd floor");
 	patientroom2.addItem("journal");
 	
@@ -47,7 +47,7 @@ void game::gameInit()
 	bathroom.addItem("");
 	
 	hallway2ndfloor.setName("hallway 2nd floor");
-	hallway2ndfloor.setDescription("");
+	hallway2ndfloor.setDescription("Upon exiting the stairwell, you are greeted by a rush of warm air and the smell of decomposing bodies. A lone light hangs from the cealing, flickering as it slowly sways. The doors on this floor are cracked open.");
 	hallway2ndfloor.addAdjacentRoom("patient room 1");
 	hallway2ndfloor.addAdjacentRoom("patient room 2");
 	hallway2ndfloor.addAdjacentRoom("patient room 3");
@@ -56,7 +56,7 @@ void game::gameInit()
 	hallway2ndfloor.addItem("");
 	
 	stairs.setName("stairs");
-	stairs.setDescription("");
+	stairs.setDescription("For an abandoned building, these stairs would seem to be in decent shape if it wasn't for the thick layer of dried blood that coated each step.");
 	stairs.addAdjacentRoom("hallway 2nd floor");
 	stairs.addAdjacentRoom("lobby");
 	stairs.addItem("");
@@ -91,7 +91,7 @@ void game::gameInit()
 	solitaryconfinement.addItem("tattered clothing");
 	
 	hallway1stfloor.setName("hallway 1st floor");
-	hallway1stfloor.setDescription("");
+	hallway1stfloor.setDescription("Except for the red glow of the exit sign, the hallway is dark.");
 	hallway1stfloor.addAdjacentRoom("lab");
 	hallway1stfloor.addAdjacentRoom("operating room");
 	hallway1stfloor.addAdjacentRoom("solitary confinement");
