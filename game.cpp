@@ -356,12 +356,16 @@ void game::run()
 				currentRoom = operatingroom;
 			else if(string2 == "solitary confinement")
 				currentRoom = solitaryconfinement;
+			else if(string2 == "solitary confinement door")
+				currentRoom = solitaryconfinementdoor;
 			else if(string2 == "hallway 1st floor")
 				currentRoom = hallway1stfloor;
 			else if(string2 == "courtyard")
 				currentRoom = courtyard;
 			else if(string2 == "guard house")
 				currentRoom = guardhouse;
+			else if(string2 == "guard house door")
+				currentRoom = guardhousedoor;
 			else
 			{
 				state = state_input;
