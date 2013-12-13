@@ -189,75 +189,77 @@ void game::outputRoom()
 // prints the map item
 void game::outputMap()
 {
+	system("clear");
 	cout << map;
 }
 
 // prints the drawing item
 void game::outputDrawing()
 {
+	system("clear");
 	cout << drawing;
 }
 
 // gets input string from the user
 bool game::getInput()
 {
-  input.clear();
-  string1.clear();
-  string2.clear();
+ 	input.clear();
+	string1.clear();
+	string2.clear();
 
-  cout << "What do you do?" << endl;
-  getline(cin, input);
+	cout << "What do you do?" << endl;
+	getline(cin, input);
 
-  if(input == "exit")
-	exit(0);
-  if(input == "info")
-  {
-	return 0;
-  }
-  if(input == "help")
-  {
-	  outputWelcome();
-	  return 0;
-  }
-  
-  int i = 0;
-  while((input[i] != ' ') && (i <= input.size()))
-  {
-    string1 += input[i];
-    i++;
-  }
-  i++;
-  while(i < input.size())
-  {
-    string2 += input[i];
-    i++;
-  }
-  return 1;
+	if(input == "exit")
+		exit(0);
+	if(input == "info")
+	{
+		return 0;
+	}
+	if(input == "help")
+	{
+		outputWelcome();
+		return 0;
+	}
+
+	int i = 0;
+	while((input[i] != ' ') && (i <= input.size()))
+	{
+		string1 += input[i];
+		i++;
+	}
+	i++;
+	while(i < input.size())
+	{
+		string2 += input[i];
+		i++;
+	}
+	return 1;
 }
 
 // checks the input string entered by the user
 bool game::checkInput()
 {
-  if(string1 == "move")
-  {
-	command = 0;
-    return 1;
-  }
-  else if(string1 == "pickup")
-  {
-	command = 1;
-    return 1;
-  }
-  else if(string1 == "use")
-  {
-	command = 2;
-	return 1;
-  }
-  else
-  {
-	command = 3;
-    return 0;
-  }
+	if(string1 == "move")
+	{
+		command = 0;
+		return 1;
+	}
+	else if(string1 == "pickup")
+	{
+		command = 1;
+		return 1;
+	}
+	else if(string1 == "use")
+	{
+		command = 2;
+		return 1;
+	}
+	else
+	{
+		command = 3;
+		return 0;
+	}
 }
 
 // runs the game
