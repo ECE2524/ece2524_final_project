@@ -86,9 +86,13 @@ void game::gameInit()
 	// starting room
 	solitaryconfinement.setName("solitary confinement");
 	solitaryconfinement.setDescription("You have awoken to find yourself laying in the middle of a white-padded room. The single light-bulb above you flickers inconsistently, and there are no signs of life around you. Across from you there is a battered door that appears to be locked.");
-	solitaryconfinement.addAdjacentRoom("hallway 1st floor");
+	solitaryconfinement.addAdjacentRoom("solitary confinement door");
 	solitaryconfinement.addItem("hair pin");
 	solitaryconfinement.addItem("tattered clothing");
+
+	solitaryconfinementdoor.setName("solitary confinement door");
+	solitaryconfinementdoor.setDescription("The battered door has a lock.");
+	solitaryconfinementdoor.addAdjacentRoom("solitary confinement");
 	
 	hallway1stfloor.setName("hallway 1st floor");
 	hallway1stfloor.setDescription("Except for the red glow of the exit sign, the hallway is dark.");
@@ -110,6 +114,10 @@ void game::gameInit()
 	guardhouse.setDescription("There is a small television recording the surveillance of the different rooms onto tape. You begin to rewind the video, watching yourself explore the unknown surroundings. Once at the beginning of the tape, you see yourself laying on the operation table while a group of doctors inject you with syringes. You immediately remove yourself from the table and begin attacking the doctors. Terrified they flee, but cannot outrun you, as you attack them. Then, as if nothing happened, you slowly walk into the white-padded room, locking yourself inside.");
 	guardhouse.addAdjacentRoom("courtyard");
 	guardhouse.addItem("");
+
+	solitaryconfinementdoor.setName("guard house door");
+	solitaryconfinementdoor.setDescription("The door is locked with a numeric key-pad.");
+	solitaryconfinementdoor.addAdjacentRoom("courtyard");
 
 	map = 
 	"  Second Floor_______________________						\r\n"
