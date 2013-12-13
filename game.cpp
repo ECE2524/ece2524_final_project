@@ -37,9 +37,9 @@ void game::gameInit()
 	patientroom2.addItem("journal");
 	
 	patientroom3.setName("patient room 3");
-	patientroom3.setDescription("The room is empty and there are hundreds of scratches and marks on the wooden-paneled walls. Among these marks you notice 4 distinct combinations of letters. ‘SN’, ‘AK’,  ‘EB’, and  IT’.");
+	patientroom3.setDescription("The room is empty and there are hundreds of scratches and marks on the wooden-paneled walls. Among these marks you notice '2' '5' '2' '4'.");
 	patientroom3.addAdjacentRoom("hallway 2nd floor");
-	patientroom3.addItem("letter combination");
+	patientroom3.addItem("note");
 	
 	bathroom.setName("bathroom");
 	bathroom.setDescription("A mirror is located on the adjacent wall to the entrance. Looking into it you see yourself. With blood-shot eyes and veins protruding from your neck, you stare in disbelief. You see a shadow walk behind you in the mirror, but turn around to see nothing.");
