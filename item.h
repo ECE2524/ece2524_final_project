@@ -16,9 +16,9 @@ public:
 	item();
 	// class destructor
 	~item();
-	// add an item to the player inventory
+	// set the name of the object
 	void setName(string);
-	// print the items the player inventory
+	// print the name of the object
 	void printName();
 	// set the description of an item
 	void setDescription(string);
