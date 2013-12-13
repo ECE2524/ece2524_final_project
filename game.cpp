@@ -179,7 +179,6 @@ void game::outputWelcome()
 // prints the room information
 void game::outputRoom()
 {
-	//cout << "\n-----------------------------------------------------------------\n\n";
 	system("clear");
 	currentRoom.printName();
 	currentRoom.printDescription();
