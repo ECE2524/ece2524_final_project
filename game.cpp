@@ -344,10 +344,7 @@ void game::run()
 					state = state_input;
 				break;
 			case 3:
-				if(patient.isInventory(string2) == 1)
-					state = state_inventory;
-				else
-					state = state_input;
+				state = state_inventory;
 				break;
 			default:
 				state = state_input;
