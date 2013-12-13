@@ -261,11 +261,17 @@ bool game::checkInput()
 		command = 2;
 		return 1;
 	}
-	else
+	else if(string1 == "show")
 	{
 		command = 3;
+		return 1;
+	}
+	else
+	{
+	        command = 4;
 		return 0;
 	}
+	    
 }
 
 // runs the game
