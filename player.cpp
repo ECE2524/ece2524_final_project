@@ -13,13 +13,13 @@ player::~player()
 }
 
 // set the name of the player
-void setName(string newName)
+void player::setName(string newName)
 {
 	name = newName;
 }
 
 // print the name of the player
-void printName()
+void player::printName()
 {
 	cout << name;
 }
