@@ -169,7 +169,9 @@ void game::gameInit()
 void game::outputWelcome()
 {
 	system("clear");
-	cout << "Welcome, " << patient.printName() << ", to the Woodbury Asylum.  You have been admitted because you have been diagnosed with a serious mental illness.  Our doctors will work their best to help you recuperate.\n\n";
+	cout << "Welcome, ";
+	patient.printName();
+	cout << ", to the Woodbury Asylum.  You have been admitted because you have been diagnosed with a serious mental illness.  Our doctors will work their best to help you recuperate.\n\n";
 	cout << "To explore the psychiatric institute, you can type the following:\n";
 	cout << "- To move between rooms        'move <adjacent room name>'\n";
 	cout << "- To pick up an item           'pickup <item>'\n";
@@ -235,7 +237,7 @@ bool game::getInput()
 		string1 += input[i];
 		i++;
 	}
-	if(input[i] != NULL)
+	if(input[i] != '\0')
 		i++;
 	while(i < input.size())
 	{
@@ -291,7 +293,7 @@ void game::run()
 		{
 		// game welcome state
 		case state_name:
-			cout << "Please enter your name: "
+			cout << "Please enter your name: ";
 			getline(cin, input);
 			patient.setName(input);
 			state = state_welcome;
@@ -342,7 +344,7 @@ void game::run()
 					state = state_input;
 				break;
 			case 3:
-				f(patient.isInventory(string2) == 1)
+				if(patient.isInventory(string2) == 1)
 					state = state_inventory;
 				else
 					state = state_input;
@@ -414,7 +416,7 @@ void game::run()
 		case state_inventory:
 			system("clear");
 			patient.printInventory();
-			state = state input;
+			state = state_input;
 			break;
 		}
 	}
