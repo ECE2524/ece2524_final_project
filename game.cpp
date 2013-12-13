@@ -228,14 +228,15 @@ bool game::getInput()
 		outputWelcome();
 		return 0;
 	}
-
+	
 	int i = 0;
 	while((input[i] != ' ') && (i <= input.size()))
 	{
 		string1 += input[i];
 		i++;
 	}
-	i++;
+	if(input[i] != NULL)
+		i++;
 	while(i < input.size())
 	{
 		string2 += input[i];
@@ -278,8 +279,8 @@ bool game::checkInput()
 // runs the game
 void game::run()
 {
-	enum states {state_welcome, state_output, state_input, state_command, state_move, state_pickup, state_use};
-	states state = state_welcome;
+	enum states {state_name, state_welcome, state_output, state_input, state_command, state_move, state_pickup, state_use, state_inventory};
+	states state = state_name;
 
 	currentRoom = solitaryconfinement;
 
@@ -289,6 +290,12 @@ void game::run()
 		switch(state)
 		{
 		// game welcome state
+		case state_name:
+			cout << "Please enter your name: "
+			getline(cin, input);
+			patient.setName(input);
+			state = state_welcome;
+			break;
 		case state_welcome:
 			outputWelcome();
 			state = state_output;
@@ -331,6 +338,12 @@ void game::run()
 			case 2:
 				if(patient.isInventory(string2) == 1)
 					state = state_use;
+				else
+					state = state_input;
+				break;
+			case 3:
+				f(patient.isInventory(string2) == 1)
+					state = state_inventory;
 				else
 					state = state_input;
 				break;
@@ -397,6 +410,11 @@ void game::run()
 			patient.addInventory(string2);
 			cout << "\nYou have added the " << string2 << " to your inventory.\n\n";
 			state = state_input;
+			break;
+		case state_inventory:
+			system("clear");
+			patient.printInventory();
+			state = state input;
 			break;
 		}
 	}
