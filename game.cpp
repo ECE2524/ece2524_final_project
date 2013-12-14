@@ -43,7 +43,6 @@ void game::gameInit()
 	bathroom.setName("bathroom");
 	bathroom.setDescription("A mirror is located on the adjacent wall to the entrance. Looking into it you see yourself. With blood-shot eyes and veins protruding from your neck, you stare in disbelief. You see a shadow walk behind you in the mirror, but turn around to see nothing.");
 	bathroom.addAdjacentRoom("hallway 2nd floor");
-	bathroom.addItem("");
 	
 	hallway2ndfloor.setName("hallway 2nd floor");
 	hallway2ndfloor.setDescription("Upon exiting the stairwell, you are greeted by a rush of warm air and the smell of decomposing bodies. A lone light hangs from the cealing, flickering as it slowly sways. The doors on this floor are cracked open.");
@@ -52,13 +51,11 @@ void game::gameInit()
 	hallway2ndfloor.addAdjacentRoom("patient room 3");
 	hallway2ndfloor.addAdjacentRoom("bathroom");
 	hallway2ndfloor.addAdjacentRoom("stairs");
-	hallway2ndfloor.addItem("");
 	
 	stairs.setName("stairs");
 	stairs.setDescription("For an abandoned building, these stairs would seem to be in decent shape if it wasn't for the thick layer of dried blood that coated each step.");
 	stairs.addAdjacentRoom("hallway 2nd floor");
 	stairs.addAdjacentRoom("lobby");
-	stairs.addItem("");
 	
 	lobby.setName("lobby");
 	lobby.setDescription("What once was a nice entrance to the building is in disarray. Planted pots have been turned and the windows are shattered. Blood stains lead out of the building and a severed head is in the corner of the room.");
@@ -100,19 +97,16 @@ void game::gameInit()
 	hallway1stfloor.addAdjacentRoom("solitary confinement");
 	hallway1stfloor.addAdjacentRoom("warden office");
 	hallway1stfloor.addAdjacentRoom("lobby");
-	hallway1stfloor.addItem("");
 	
 	courtyard.setName("courtyard");
 	courtyard.setDescription("It is slightly raining and there are muddy footprints leading out of the now closed front gate. The entire yard is surrounded by a large fence topped with barbed wire. At the gate entrance there is a small building with a combination lock, requiring four numbers, on the door.");
 	courtyard.addAdjacentRoom("lobby");
 	courtyard.addAdjacentRoom("guard house");
-	courtyard.addItem("");
 	
 	// ending room?
 	guardhouse.setName("guard house");
 	guardhouse.setDescription("There is a small television recording the surveillance of the different rooms onto tape. You begin to rewind the video, watching yourself explore the unknown surroundings. Once at the beginning of the tape, you see yourself laying on the operation table while a group of doctors inject you with syringes. You immediately remove yourself from the table and begin attacking the doctors. Terrified they flee, but cannot outrun you, as you attack them. Then, as if nothing happened, you slowly walk into the white-padded room, locking yourself inside.");
 	guardhouse.addAdjacentRoom("courtyard");
-	guardhouse.addItem("");
 
 	guardhousedoor.setName("guard house door");
 	guardhousedoor.setDescription("The door is locked with a numeric key-pad.");
