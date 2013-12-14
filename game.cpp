@@ -320,14 +320,8 @@ void game::run()
 				}
 				else
 				{
-					cout << 
-					"._.         .   .   __                      .\r\n"
-					" | ._ . , _.|* _|  |  ` _ ._ _ ._ _  _.._  _|\r\n"
-					"_|_[ ) V (_]||(_]  |__.(_)[ | )[ | )(_][ )(_]\r\n";                                                                                                               
-
-
-
-
+					cout << "INVALID COMMAND\r\n\n";
+                                                                                     
 					state = state_input;
 				}
 			}
