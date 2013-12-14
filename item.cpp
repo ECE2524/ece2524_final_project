@@ -19,9 +19,15 @@ void item::setName(string newName)
 }
 
 // print the name of the object
-void item::printName()
+void item::printName() const
 {
-	cout << "Item name: " << name << "\n\n";
+	cout << name << "\n";
+}
+
+// returns the item name
+string item::getName() const
+{
+	return name;
 }
 
 // set the description of an item

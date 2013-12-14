@@ -15,18 +15,35 @@ room::~room()
 }
 
 // add an item to the room
-void room::addItem(string newItem)
+void room::addItem(item newItem)
 {
 	items.push_back(newItem);
+}
+
+// remove an item from the room
+void room::removeItem(item oldItem)
+{
+	int i = 0;
+	for(list<item>::iterator iterator = items.begin(), end = items.end(); iterator != end; ++iterator)
+	{
+		string temp = iterator->getName();
+		string temp2 = oldItem.getName();
+		if(temp == temp2)
+		{
+			items.erase(iterator++);
+			break;
+		}
+		i++;
+	}
 }
 
 // print the items in a room
 void room::printItems()
 {
 	cout << "Room items:\n";
-	for(list<string>::const_iterator iterator = items.begin(), end = items.end(); iterator != end; ++iterator)
+	for(list<item>::const_iterator iterator = items.begin(), end = items.end(); iterator != end; ++iterator)
 	{
-		cout << *iterator << "\n";
+		iterator->printName();
 	}
 	cout << "\n";
 }
@@ -69,6 +86,11 @@ void room::setName(string newName)
 void room::printName()
 {
 	cout << "Room name: " << name << "\n\n";
+}
+
+string room::getName()
+{
+	return name;
 }
 
 // set the description of a room

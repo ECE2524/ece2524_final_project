@@ -1,7 +1,8 @@
 #include "player.h"
 #include "room.h"
-
+#include "item.h"
 #include <cstdlib>
+#include <curses.h>
 
 class game
 {
@@ -16,6 +17,8 @@ private:
 	int command;
 	// the current room object
 	room currentRoom;
+	// the current item being used
+	item currentItem;
 	// the player object
 	player patient;
 
@@ -38,8 +41,25 @@ private:
 	room guardhousedoor;
 
 	// items in the game
-	string map;
-	string drawing;
+	item clothing;
+	item patientlisting;
+	item journal;
+	item hairpin;
+	item severedhead;
+	item map;
+	item drawing;
+	item emptysyringes;
+	item pileofbones;
+	item pen;
+	item cigar;
+	item bandages;
+	item scalpel;
+	item beaker;
+	item vial;
+	
+	// drawings in the game
+	string amap;
+	string adrawing;
 public:
 	// class constructor
 	game();
@@ -51,10 +71,6 @@ public:
 	void outputWelcome();
 	// prints the room information
 	void outputRoom();
-	// prints the map item
-	void outputMap();
-	// prints the drawing item
-	void outputDrawing();
 	// gets input string from the user
 	bool getInput();
 	// checks the input string entered by the user

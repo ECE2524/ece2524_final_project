@@ -1,3 +1,6 @@
+#ifndef ITEM
+#define ITEM
+
 #include <list>
 #include <string>
 #include <iostream>
@@ -19,9 +22,13 @@ public:
 	// set the name of the object
 	void setName(string);
 	// print the name of the object
-	void printName();
+	void printName() const;
+	// returns the item name
+	string getName() const;
 	// set the description of an item
 	void setDescription(string);
 	// print the description of an item
 	void printDescription();
 };
+
+#endif

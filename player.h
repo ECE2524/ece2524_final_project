@@ -9,7 +9,7 @@ class player
 {
 private:
 	// linked list stores player inventory items
-	list<string> inventory;
+	list<item> inventory;
 	// holds the name of the player
 	string name;
 public:
@@ -22,7 +22,7 @@ public:
 	// print the name of the player
 	void printName();
 	// add an item to the player inventory
-	void addInventory(string);
+	void addInventory(item);
 	// check if an item is in the player inventory
 	bool isInventory(string);
 	// print the items the player inventory
