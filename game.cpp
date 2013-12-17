@@ -76,7 +76,7 @@ void game::gameInit()
 	severedhead.setName("severed head");
 	severedhead.setDescription("The head looks like one of your college professors...");
 
-	emptysyringes.setName("emptysyringes");
+	emptysyringes.setName("empty syringes");
 	emptysyringes.setDescription("There is a slight residue inside the syringes.  It looks like some sort of black goo...");
 
 	pileofbones.setName("pile of bones");
